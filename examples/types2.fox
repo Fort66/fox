@@ -1,0 +1,25 @@
+* Булева логика и строковые встроенные функции
+
+local flag = true
+local other = false
+print flag
+print other
+print flag and other
+print flag or other
+print not other
+print 5 > 3 and not other
+
+local s = "  Hello, Fox  "
+local t = trim(s)
+print t
+print upper(t)
+print lower(t)
+print len(t)
+print substr(t, 8, 3)
+print str(42)
+print val("123") + 7
+local mixed = upper(substr(t, 1, 5)) + "!"
+print mixed
+if len(t) > 0 and not flag == false
+    print "logic ok"
+endif

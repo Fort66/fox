@@ -1,0 +1,7 @@
+--- FUNCTIONS TEST ---
+5
+49
+Hello, Fox
+Hello, World
+7
+strcmp ok

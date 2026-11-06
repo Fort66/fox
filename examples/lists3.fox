@@ -1,0 +1,44 @@
+* Списки: append и for each (шаг 4c)
+
+local nums = [1, 2]
+append(nums, 3)
+append(nums, 4 + 5)
+print count(nums)
+
+local total = 0
+for each n in nums
+    total += n
+endfor
+print total
+
+local strs = ["a"]
+append(strs, "b")
+for each s in strs
+    print upper(s)
+endfor
+
+local doubled = []
+for each n in nums
+    append(doubled, n * 2)
+endfor
+for each n in doubled
+    print n
+endfor
+
+
+* Списки: append (шаг 4c-1)
+
+local a = [1, 2]
+append(a, 3)
+append(a, 4 + 5)
+print count(a)
+print a[4]
+
+local s = ["x"]
+append(s, "y")
+print s[2]
+
+local empty = []
+append(empty, 7)
+print count(empty)
+print empty[1]

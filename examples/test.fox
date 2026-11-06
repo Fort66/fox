@@ -1,0 +1,120 @@
+* ============================================
+* КОМПЛЕКСНЫЙ ТЕСТ ЯЗЫКА FOX
+* ============================================
+
+* --- ТЕСТ 1: Переменные и арифметика ---
+print "=== ТЕСТ 1: Переменные и арифметика ==="
+local a = 10
+local b = 3
+local sum = a + b
+local diff = a - b
+local prod = a * b
+local quot = a / b
+local int_div = a // b
+local remainder = a % b
+print sum
+print diff
+print prod
+print quot
+print int_div
+print remainder
+
+* --- ТЕСТ 2: Строки ---
+print "=== ТЕСТ 2: Строки ==="
+local greeting = "Hello"
+local name = "Fox"
+print greeting
+print name
+
+* --- ТЕСТ 3: Условия if/elif/else ---
+print "=== ТЕСТ 3: Условия ==="
+local x = 15
+if x > 20
+    print "x больше 20"
+elif x > 10
+    print "x больше 10, но не больше 20"
+elif x > 5
+    print "x больше 5, но не больше 10"
+else
+    print "x меньше или равно 5"
+endif
+
+* --- ТЕСТ 4: Цикл while ---
+print "=== ТЕСТ 4: Цикл while ==="
+local i = 1
+while i <= 5
+    print i
+    i += 1
+endwhile
+
+* --- ТЕСТ 5: Цикл for ---
+print "=== ТЕСТ 5: Цикл for ==="
+for j = 1 to 5
+    print j
+endfor
+
+* --- ТЕСТ 6: Do-case ---
+print "=== ТЕСТ 6: Do-case ==="
+local choice = 2
+do case
+    case choice == 1
+        print "Выбран вариант 1"
+    case choice == 2
+        print "Выбран вариант 2"
+    case choice == 3
+        print "Выбран вариант 3"
+    otherwise
+        print "Неизвестный вариант"
+endcase
+
+* --- ТЕСТ 7: Составные операторы присваивания ---
+print "=== ТЕСТ 7: Составные операторы ==="
+local val = 10
+val += 5
+print val
+val -= 3
+print val
+val *= 2
+print val
+val /= 4
+print val
+val = 17
+val %= 5
+print val
+val = 17
+val //= 5
+print val
+
+* --- ТЕСТ 8: Вложенные конструкции ---
+print "=== ТЕСТ 8: Вложенные конструкции ==="
+for row = 1 to 3
+    for col = 1 to 3
+        if row == col
+            print "X"
+        else
+            print "O"
+        endif
+    endfor
+endfor
+
+* --- ТЕСТ 9: Сложные выражения ---
+print "=== ТЕСТ 9: Сложные выражения ==="
+local result = (2 + 3) * 4 - 10 / 2
+print result
+local check = 10 > 5
+print check
+
+* --- ТЕСТ 10: Граничные случаи ---
+print "=== ТЕСТ 10: Граничные случаи ==="
+local zero = 0
+local negative = -5
+print zero
+print negative
+if zero == 0
+    print "Ноль равен нулю"
+endif
+if negative < 0
+    print "Отрицательное число"
+endif
+
+print "=== ВСЕ ТЕСТЫ ЗАВЕРШЕНЫ ==="

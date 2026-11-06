@@ -1,0 +1,15 @@
+1
+0
+0
+1
+1
+1
+Hello, Fox
+HELLO, FOX
+hello, fox
+10
+Fox
+42
+130
+HELLO!
+logic ok

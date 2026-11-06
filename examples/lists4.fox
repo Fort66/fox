@@ -1,0 +1,45 @@
+* Списки в функциях: параметры и return (шаг 5)
+
+func total(number list xs)
+    local acc = 0
+    for each x in xs
+        acc += x
+    endfor
+    return acc
+endfunc
+
+func doubled(number list xs)
+    local out: number list = []
+    for each x in xs
+        append(out, x * 2)
+    endfor
+    return out
+endfunc
+
+func shout(string list xs)
+    local out: string list = []
+    for each x in xs
+        append(out, upper(x))
+    endfor
+    return out
+endfunc
+
+func try_mutate(number list xs)
+    append(xs, 999)
+    return count(xs)
+endfunc
+
+local nums = [1, 2, 3]
+print total(nums)
+
+local twice = doubled(nums)
+print count(twice)
+print twice[3]
+print total(twice)
+
+local words = ["a", "b"]
+local loud = shout(words)
+print loud[2]
+
+print try_mutate(nums)
+print count(nums)

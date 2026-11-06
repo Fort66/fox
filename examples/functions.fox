@@ -1,0 +1,29 @@
+* Тест функций
+
+func add(number a, number b)
+    return a + b
+endfunc
+
+func square(number x)
+    return x * x
+endfunc
+
+func greet(string name)
+    return "Hello, " + name
+endfunc
+
+func banner()
+    print "--- FUNCTIONS TEST ---"
+endfunc
+
+banner()
+print add(2, 3)
+print square(7)
+print greet("Fox")
+local s = greet("World")
+print s
+local n = add(square(2), add(1, 2))
+print n
+if greet("A") == "Hello, A"
+    print "strcmp ok"
+endif

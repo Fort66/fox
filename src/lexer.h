@@ -1,0 +1,88 @@
+#ifndef FOX_LEXER_H
+#define FOX_LEXER_H
+
+typedef enum {
+    TOKEN_EOF,
+    TOKEN_ERROR,
+
+    TOKEN_LEFT_PAREN,
+    TOKEN_RIGHT_PAREN,
+    TOKEN_COMMA,
+    TOKEN_LEFT_BRACKET,
+    TOKEN_RIGHT_BRACKET,
+
+    TOKEN_LOCAL,
+    TOKEN_CLASS,
+    TOKEN_ENDCLASS,
+    TOKEN_FUNC,
+    TOKEN_ENDFUNC,
+    TOKEN_RETURN,
+    TOKEN_IF,
+    TOKEN_ELIF,
+    TOKEN_ELSE,
+    TOKEN_ENDIF,
+    TOKEN_DO,
+    TOKEN_CASE,
+    TOKEN_OTHERWISE,
+    TOKEN_ENDCASE,
+    TOKEN_WHILE,
+    TOKEN_ENDWHILE,
+    TOKEN_FOR,
+    TOKEN_ENDFOR,
+    TOKEN_EACH,
+    TOKEN_IN,
+    TOKEN_PRINT,
+    TOKEN_STORE,
+    TOKEN_TO,
+
+    TOKEN_TRUE,
+    TOKEN_FALSE,
+    TOKEN_NOT,
+    TOKEN_AND,
+    TOKEN_OR,
+
+    TOKEN_TYPE_NUMBER,
+    TOKEN_TYPE_STRING,
+    TOKEN_LIST,
+
+    TOKEN_LIST_NUMBER,
+    TOKEN_LIST_STRING,
+
+    TOKEN_IDENTIFIER,
+    TOKEN_NUMBER,
+    TOKEN_STRING,
+
+    TOKEN_COLON,
+
+    TOKEN_EQUAL,
+    TOKEN_PLUS,
+    TOKEN_MINUS,
+    TOKEN_STAR,
+    TOKEN_SLASH,
+    TOKEN_PERCENT,
+    TOKEN_DOUBLE_SLASH,
+    TOKEN_PLUS_EQUAL,
+    TOKEN_MINUS_EQUAL,
+    TOKEN_STAR_EQUAL,
+    TOKEN_SLASH_EQUAL,
+    TOKEN_PERCENT_EQUAL,
+    TOKEN_DSLASH_EQUAL,
+    TOKEN_BANG_EQUAL,
+    TOKEN_EQUAL_EQUAL,
+    TOKEN_GREATER,
+    TOKEN_GREATER_EQUAL,
+    TOKEN_LESS,
+    TOKEN_LESS_EQUAL
+} TokenType;
+
+typedef struct {
+    TokenType type;
+    const char* start;
+    int length;
+    int line;
+} Token;
+
+void init_lexer(const char* source);
+Token scan_token(void);
+
+#endif
